@@ -1,0 +1,29 @@
+
+    {{/*
+
+		If in development then just produce the whole Tailwind CSS file
+
+		There is an issue with Hugo processing the PostCSS config file - so I have set
+		the configuration values manually:
+			(dict "use" "tailwindcss" "noMap" true)
+
+        If in prod use the postcss config file at root and then minify and purge the unused CSS
+
+    */}}
+
+    {{ $cssfile := resources.Get "css/main.css" }}
+
+	{{ if .Site.IsServer }}
+
+        {{ $style := $cssfile | postCSS (dict "use" "tailwindcss" "noMap" true) | resources.Minify }}
+
+	    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+    {{ else }}
+
+        {{ $style := $cssfile | resources.PostCSS (dict "config" "postcss.config.js") | resources.Minify | resources.Fingerprint }}
+
+	    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+    {{ end }}
+
