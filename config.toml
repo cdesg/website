@@ -1,5 +1,5 @@
 # DEVELOPMENT ADDRESS
-baseURL = "https://cdesg-development.netlify.com/"
+baseURL = "/"
 
 # PRODUCTION ADDRESS
 #baseURL = "TO DO"
@@ -19,4 +19,4 @@ title = "Canadian Development Economic Study Group"
 
 # USER DEFINED SITE PARAMETERS
 [params]
-  description = "To do"
+	description = "To do"

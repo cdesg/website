@@ -3,6 +3,7 @@
 
 # Ignore node modules 
 node_modules
+resources
 
 ## OS Files
 # Windows
