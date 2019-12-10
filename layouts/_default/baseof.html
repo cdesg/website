@@ -17,15 +17,9 @@
     </head>
     <body class="bg-brand-gray-100 text-gray-800">
 
-        {{ block "site/skiplinks" . }}{{ partial "site/skiplinks.html" . }}{{ end }}
-
-        {{ block "site/header" . }}{{ partial "site/header.html" . }}{{ end }}
-
         <main role="main">
             {{ block "main" . }}{{ end }}
         </main>
-
-        {{ block "site/footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 
         {{ block "site/scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
 
