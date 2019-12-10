@@ -23,9 +23,7 @@
 
         {{ $style := $cssfile | resources.PostCSS (dict "config" "postcss.config.js") | resources.Minify | resources.Fingerprint }}
 
-        <link rel="stylesheet" href="{{ $style.Permalink }}" 
-            crossorigin="anonymous" 
-            integrity="{{ $style.Data.Integrity }}" />
+        <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
     {{ end }}
 
