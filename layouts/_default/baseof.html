@@ -2,6 +2,10 @@
 <html lang="{{ .Site.LanguageCode | default "en" }}">
     <head>
 
+        {{ if eq hugo.Environment "development" }}
+        <meta name="robots" content="noindex, nofollow">
+        {{ end }}
+
         {{ block "site/metadata" . }}{{ partial "site/metadata.html" . }}{{ end }}
 
         {{ block "site/favicon" . }}{{ partial "site/favicon.html" . }}{{ end }}
