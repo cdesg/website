@@ -62,7 +62,7 @@
 			<div class="md:w-5/6 mx-auto py-24 px-10 md:px-0">
 				<h2 class="text-5xl font-extrabold">News</h2>
 
-				<p class="text-xl text-brand-gray-600 py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisl diam. Mauris eu arcu in dui viverra aliquam. Morbi condimentum enim est. Vivamus et elit non sapien hendrerit bibendum ut quis leo. </p>
+				<p class="text-xl text-brand-gray-600 py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisl diam. Mauris eu arcu in dui viverra aliquam. Morbi condimentum enim est. Vivamus et elit non sapien hendrerit bibendum ut quis leo.</p>
 
 				<!-- Two columns -->
 				<div class="flex flex-wrap -mx-4 overflow-hidden">
@@ -107,9 +107,33 @@
 
     
     <!-- Our members section -->
-    <section class="bg-brand-accent text-white py-32 my-10">
-        <div class="container mx-auto">
-            <h1>Our members</h1>
+	<section>
+		<div class="container mx-auto">
+			<div class="md:w-5/6 mx-auto py-24 px-10 md:px-0">
+
+				
+					<!-- Row  -->
+					<div class="flex flex-col-reverse md:flex-row items-center">
+
+						<!-- Column -->
+						<div class="w-full md:w-1/2">
+							
+							<h2 class="text-5xl font-extrabold">Our members</h2>
+
+							<p class="text-xl text-brand-gray-600 py-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisl diam. Mauris eu arcu in dui viverra aliquam. Morbi condimentum enim est. Vivamus et elit non sapien hendrerit bibendum ut quis leo.</p>
+
+							<p><a class="text-2xl text-brand-accent font-extrabold hover:underline" href="#">View our members</a></p>
+
+						</div>
+
+						<div class="w-full md:w-1/2 pl-32">
+							<img class="object-contain" src="{{ "/images/home/members/members.png" | relURL }}" alt="" /> 
+						</div>
+						
+					</div>				
+				
+				
+			</div>
         </div>
     </section>
     <!-- Our members section -->
@@ -117,53 +141,17 @@
 
     <!-- Join Us highlight -->
     <section>
-        <div class="bg-brand-accent text-white py-32 my-10">
-            <div class="flex justify-around container mx-auto border border-gray-600">
-                <h2 class="text-5xl">If you would like to join the group and participate in future <abbr>CDESG</abbr> activities please drop us a line.</h2>
-                <a class="border border-white p-3" href="#">Join us</a>
-            </div>
-        </div>
+		<div class="bg-brand-accent text-white">
+			<div class="container mx-auto">
+				<div class="flex py-32 items-center">
+					<h2 class="text-4xl font-bold">If you would like to join the group and participate in future <abbr>CDESG</abbr> activities please drop us a line.</h2>
+					<a class="border border-white rounded-lg p-5 text-lg whitespace-no-wrap font-extrabold md:ml-12" href="#">Join the group</a>
+				</div>
+			</div>
+		</div>
     </section>
 
     <!-- End Join Us highlight -->
-
-
-
-    <!-- Page wrapper -->
-    <div class="flex justify-center">
-
-        <!-- Row -->
-        <div class="w-full flex flex-col-reverse md:flex-row">
-
-            <!-- Column -->
-            <div class="w-full h-auto md:min-h-screen flex flex-col">
-
-                <div class="m-10">
-
-                    <img class="w-4/6 mb-5 md:mb-24 xl:w-3/6" src="/images/logo/brand.png" alt="Logo for the CDESG" />
-
-                    <h1 class="sr-only">Canadian Development Economic Study Group</h1>
-                    
-                    <p class="text-6xl font-extrabold leading-tight">Coming soon</p>
-
-                    <p class="text-5xl font-semibold leading-tight py-10">We are working hard to launch our new website.</p>
-
-                    <p>For immediate inquiries please contact <a class="font-bold text-brand-orange" href="mailto:cdesgorg@gmail.com">cdesgorg@gmail.com</a></p>
-
-                </div>
-               
-            </div>
-
-            <!-- Column -->
-            <div class="w-full h-auto md:min-h-screen bg-gray-100 md:bg-brand-accent flex flex-col justify-center">
-                
-                <img class="w-full md:p-12 lg:p-24 xl:p-40 hidden md:block object-contain" src="/images/coming-soon/build-illustration.png" alt="" />
-    
-            </div>
-
-        </div>
-
-    </div>
 
 
 {{ end }}
