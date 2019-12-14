@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<div class="container mx-auto">
+
+    <div class="md:w-4/6 mx-auto mb-5 pt-12 md:pt-24 px-10 md:px-0">
+
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-snug">{{ .Title }}</h1>
+
+    </div>
+
+    <!-- Only run this if there is an image -->
+    {{ with .Resources.Match "cover" }}
+    <div class="w-full md:w-5/6 mx-auto mb-5 md:px-0 ">
+
+        {{ range . }}  
+        <img class="md:rounded-lg md:my-10 object-cover w-full h-128" src="{{ .RelPermalink }}" alt="{{ .Title }}" />
+        {{ end }}
+
+    </div>
+    {{ end }}
+
+    
+    <!-- Article Date and Content -->
+    <div class="md:w-4/6 mx-auto pb-12 md:pb-24 px-10 md:px-0 border-b">
+
+        <p class="text-xl font-bold mb-5">{{ .Date.Format "Monday, January 2, 2006" }} </p>
+
+        <div class="markdown">
+
+            {{ .Content }}
+
+            <p class="mt-10"><a href="{{ "/news" | relURL }}">View all News</a></p>
+
+        </div>
+
+    </div>
+</div>
+
+{{ end }}
