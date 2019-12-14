@@ -14,7 +14,12 @@ module.exports = {
 				'brand-gray-700': '#4D4D4D',
 				'brand-gray-800': '#303030',
 				'brand-gray-900': '#272727',
-			} 
+			} ,
+
+			height: { 
+				'96': '24rem',
+				'128': '32rem',
+			}
 		}
 	},
 	variants: {},
