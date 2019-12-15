@@ -7,7 +7,49 @@
 
             <p class="text-2xl mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisl diam. Mauris eu arcu in dui viverra aliquam. Morbi condimentum enim est. Vivamus et elit non sapien hendrerit bibendum ut quis leo.</p>
 
+            
+            {{ if gt (len .Pages) 0 }}
+            <!-- If there are pages in this section -->
+                <ul class="list-none flex flex-wrap -mx-4 overflow-hidden pt-10">
 
+                    {{ range .Pages.ByDate.Reverse  }}
+                    <!-- Walk through each section's pages and build a card -->
+                    <li class="mt-5 mb-10 px-4 w-full md:w-1/2 overflow-hidden">
+                       
+                        <!-- Column Content -->
+                       
+                        {{ if .Resources.GetMatch "cover" }}
+                            
+                            <!-- If a cover image is available -->
+                            <img class="object-cover rounded-lg mb-3 w-full h-64" src="{{ (.Resources.GetMatch "cover").RelPermalink }}" alt="" /> 
+
+                        {{ else }}
+
+                            <!-- No cover image is availabe - use -->
+                            <img class="object-cover rounded-lg mb-3 w-full h-64" src="{{ "/images/news/no-cover-yellow.png" | relURL }}" alt="" /> 
+
+                        {{ end }}
+
+
+
+                        <p class="text-brand-gray-300 text-xs">{{.Date.Format "Monday, Jan 2, 2006" }}</p>
+
+                        <h3 class="text-3xl font-bold">{{ .Title }}</h3>
+
+                        <p><a class="text-brand-accent font-extrabold tracking-widest hover:underline" href="{{ .RelPermalink }}">Read more <span class="sr-only">about ...</span></a></p>
+
+                    </li>
+                    {{ end }}
+
+                </ul>
+
+            {{ else }}
+
+                <p>No news articles added</p>
+
+            {{ end }}
+          
+{{/*
             <!-- Two columns -->
             <div class="flex flex-wrap -mx-4 overflow-hidden">
 
@@ -38,7 +80,7 @@
                 </div>
                 
             </div>
-
+*/}} 
 
 
 
