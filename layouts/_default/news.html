@@ -20,18 +20,20 @@
                        
                         {{ if .Resources.GetMatch "cover" }}
                             
-                            <!-- If a cover image is available -->
-                            <img class="object-cover rounded-lg mb-3 w-full h-64" src="{{ (.Resources.GetMatch "cover").RelPermalink }}" alt="" /> 
+                            <!-- Set the path of the available cover image -->
+                            {{ .Scratch.Set "coverURL" ((.Resources.GetMatch "cover").RelPermalink) }}
 
                         {{ else }}
 
-                            <!-- No cover image is availabe - use -->
-                            <img class="object-cover rounded-lg mb-3 w-full h-64" src="{{ "/images/news/no-cover-yellow.png" | relURL }}" alt="" /> 
+                            <!-- Set the path of the placeholder image -->
+                            {{ .Scratch.Set "coverURL" (( "/images/news/no-cover-yellow.png" | relURL) ) }}
 
                         {{ end }}
 
+                        <!-- Cover Image -->
+                        <img class="object-cover rounded-lg mb-3 w-full h-64" src="{{ .Scratch.Get "coverURL" }}" alt="" /> 
 
-
+                        
                         <p class="text-brand-gray-300 text-xs">{{.Date.Format "Monday, Jan 2, 2006" }}</p>
 
                         <h3 class="text-3xl font-bold">{{ .Title }}</h3>
