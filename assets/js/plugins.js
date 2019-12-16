@@ -54,7 +54,7 @@ var menu = (function () {
 					<button
 						class="appearance-none flex items-center px-3 py-2 text-brand-accent hover:text-white hover:border-white hover:bg-brand-accent rounded-lg"
 						id="`+ settings.menuOpenButtonId +`">
-						<span class="mr-2 font-bold">Menu</span> 
+						<span class="mr-4 font-bold">Menu </span> 
 						<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<title>Menu</title>
 							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
