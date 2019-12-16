@@ -1,19 +1,17 @@
-// Run this when JQuery is ready
-jQuery(document).ready(function ($) {
 
-	// Instantiate Mobile Menu Plugin
-	//var myMobileMenuA = new MobileMenuA({
-	//	menuContainerClassName: ""
-	//  });
+// Run this when the DOM is ready for manipulation
+document.addEventListener('DOMContentLoaded', function () {
 
+    // Our hawaiian greeting is displayed as soon as the page loads,
 
-	myMobileMenu.init({
-		menuContainerClassName: "wl-menu-container"
+    console.log('Aloha');
+
+	// Allows you to keep most of your variables and functions out of 
+	// the global scope, but make some of them publicly available.
+	menu.init({ 
+		selector: '#menu'
 	});
 
-	//myPublicationsSearch.init({
-	//	publicationListContainerClassName: "wl-publication-list-class-container",
-	//	filter: [ "type" ]
-	//});
+	
 
 });

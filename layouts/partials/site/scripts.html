@@ -1,4 +1,8 @@
 
 <!-- CDESG Custom Scripts -->
-{{ $s := resources.Get "js/app.js" }}
-<script src="{{ $s.Permalink }}"></script>
+{{ $m := resources.Get "js/main.js" }}
+{{ $p := resources.Get "js/plugins.js" }}
+
+{{ $s := slice $p $m | resources.Concat "app.js" | minify | fingerprint }}
+
+<script type="text/javascript" src="{{ $s.RelPermalink }}" integrity="{{ $s.Data.Integrity }}" media="screen"></script>
