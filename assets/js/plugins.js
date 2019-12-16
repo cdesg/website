@@ -54,7 +54,7 @@ var menu = (function () {
 					<button
 						class="appearance-none flex items-center px-3 py-2 text-brand-accent hover:text-white hover:border-white hover:bg-brand-accent rounded-lg"
 						id="`+ settings.menuOpenButtonId +`">
-						<span class="mr-4 font-bold">Menu </span> 
+						<span class="mr-2 font-bold">Menu </span> 
 						<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 							<title>Menu</title>
 							<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -70,7 +70,7 @@ var menu = (function () {
 					<button
 						class="appearance-none flex mx-auto items-center px-4 py-4 text-white text-1xl hover:text-white border border-white hover:bg-brand-accent rounded-lg"
 						id="`+ settings.menuCloseButtonId +`">
-						<span class="mr-4 font-bold">Close </span> 
+						<span class="mr-2 font-bold">Close </span> 
 						<svg class="fill-current h-4 w-4" viewBox="0 0 72.434 72.437" xmlns="http://www.w3.org/2000/svg">
 							<title>Close</title>
 							<path d="M36.22,0C16.212,0,0,16.215,0,36.223c0,19.999,16.212,36.214,36.22,36.214
