@@ -70,7 +70,7 @@ var menu = (function () {
 				`
 				<div class="mt-10 lg:hidden">
 					<button
-						class="appearance-none flex mx-auto items-center px-4 py-4 text-white text-1xl hover:text-white border border-white hover:bg-brand-accent rounded-lg"
+						class="appearance-none flex mx-auto items-center px-4 py-4 text-white text-1xl hover:text-white border border-white hover:bg-brand-accent rounded-lg focus:border-white"
 						id="`+ settings.menuCloseButtonId +`">
 						<span class="mr-2 font-bold">Close </span> 
 						<svg class="fill-current h-4 w-4" viewBox="0 0 72.434 72.437" xmlns="http://www.w3.org/2000/svg">
