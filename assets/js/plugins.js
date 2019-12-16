@@ -12,6 +12,8 @@ var menu = (function () {
 	var menuContainer = null;
 	var menuOpenButton = null;
 	var menuCloseButton = null;
+	var menuContainerFirstFocusable = null; 
+	var menuContainerLastFocusable = null;
 
 	var settings = null;
 
@@ -87,6 +89,20 @@ var menu = (function () {
 			// Cache the menu close button 
 			menuCloseButton = document.getElementById(settings.menuCloseButtonId);
 
+			// Get all of the nodes in the menu container 
+			var menuNodes = menuContainer.querySelectorAll("select, input, textarea, button, a");
+
+			// Cache the first focusable item on the menu to control tabing behaviour 
+			menuContainerFirstFocusable = menuNodes[0];
+
+			console.log(menuNodes)
+
+			// Cache the last focusable item on the menu to control tabing behaviour assuming there is 
+			//  more than one item to cache
+			if (menuNodes.length > 0) { 
+				menuContainerLastFocusable = menuNodes[menuNodes.length- 1];
+			}
+
 		}
 		else { 
 			throw("Menu Container ID was not found");
@@ -103,7 +119,17 @@ var menu = (function () {
 
 		// Bind the menu open button 
 		menuOpenButton.addEventListener('click', show.bind(this));
+
 		menuCloseButton.addEventListener('click', hide.bind(this));
+
+		// If the first focusable item is tabed on
+		menuContainerFirstFocusable.addEventListener('keydown', tabKeyMenuFirstChildHandler.bind(this)); 
+
+		// If the last focusable item is tabed on
+		menuContainerLastFocusable.addEventListener('keydown', tabKeyMenuLastChildHandler.bind(this)); 
+
+		// Add an escape key handler to the menu container
+		menuContainer.addEventListener('keydown', escapeKeyHandler.bind(this)); 
 
 	};
 
@@ -114,8 +140,11 @@ var menu = (function () {
 	var show = function () {
 		// Code goes here...
 
+		// Remove the hidden class to show the menu
 		menuContainer.classList.remove('hidden');
 
+		// Set focus after a delay to allow for the annimation
+		window.setTimeout(setFocusAfterOpen.bind(this), 300);
 
 		console.log("Mobile Menu: Open");
 
@@ -132,6 +161,57 @@ var menu = (function () {
 
 		console.log("Mobile Menu: Close");
 
+	};
+
+
+	/**
+	 * A private method
+	 */
+	var tabKeyMenuFirstChildHandler = function (e) {
+
+		console.log("First Child Handler")
+		if ( ( e.keyCode === 9 && e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			e.preventDefault();
+
+			menuContainerLastFocusable.focus();
+		}
+	};
+
+	/**
+	 * A private method
+	 */
+	var tabKeyMenuLastChildHandler = function (e) {
+
+		console.log("Last Child Handler")
+		if ( ( e.keyCode === 9 && !e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			e.preventDefault();
+
+			menuContainerFirstFocusable.focus();
+
+		}
+	};
+
+	/**
+	 * A private method
+	 */
+	var escapeKeyHandler = function (e) {
+
+		console.log("Escape Key Handler ")
+		if ( ( e.keyCode === 27 && !e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			hide(); 
+
+		}
+	};
+
+
+	/**
+	 * A private method
+	 */
+	var setFocusAfterOpen = function () {
+		menuCloseButton.focus();
 	};
 
 
