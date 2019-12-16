@@ -16,7 +16,7 @@ Lorem markdownum pietas Phorcynidos autumnus liquidis nomina gelidis vocoque:
 atque. Rigescere atque urguere sed motae est admoverat cuncta; hic dat, tamen
 facietque inposito refert: ursa. Nemus flamma prima fidemque inque signans!
 Nequiquam de nepos amanti sonum balatus lacrimas natos. Illuc est
-[vox](http://at-pariter.com/) salutem velut decor membra neget ardua reddidit
+[vox](https://at-pariter.com/) salutem velut decor membra neget ardua reddidit
 harundine inde magnum, est, nec matrem monet!
 
     var standalone = networkNetworkDocking + interlacedSpider + cgiDriveHyper;
@@ -41,13 +41,13 @@ trepidos.
 
 Sinistra venire vides procul comes: cremavit subterque funduntur oculos. Signo
 quoque ordine convexa *pretium*, magis quo: nomine relinquam obsisto [crimine
-fudit confessasque](http://isto.com/rediturum) tota *sua stipite* filia. Fuerint
+fudit confessasque](https://isto.com/rediturum) tota *sua stipite* filia. Fuerint
 Centaurorum caelo deque sagittam.
 
 ## Promissaque dicunt relinquunt violentam specta armatus consiste
 
 Errans est: incommendataque arbore [se viribus
-videri](http://cursus.org/sub-membra.php) diurnos, esse virgo versabat. Quoque
+videri](https://cursus.org/sub-membra.php) diurnos, esse virgo versabat. Quoque
 agresti redimitus condit cum tellus cervum nulla virgo corpore! Subit iudex
 gemitu **introrsus utinam**, mea uritur inque, umero garrula puer non. Velit
 vocatur. Utinam sed saxum sororum quidem alti nec, dici verba successisse dentes
