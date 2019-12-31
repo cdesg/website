@@ -7,3 +7,30 @@ header: "Contact"
 ---
 
 <p class="text-2xl mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisl diam. Mauris eu arcu in dui viverra aliquam. Morbi condimentum enim est. Vivamus et elit non sapien hendrerit bibendum ut quis leo.</p>
+
+<form class="md:w-2/3 mt-5">
+    <div class="flex flex-col">
+
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
+            Name
+        </label>
+        <input class="appearance-none block w-full bg-brand-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" type="text">
+
+
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+            Email
+        </label>
+        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" type="email">
+
+
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+            Message
+        </label>
+        <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+        
+        <button class="shadow bg-brand-accent hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+            Send
+          </button>
+
+    </div>
+</form>
