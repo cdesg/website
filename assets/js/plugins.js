@@ -14,6 +14,7 @@ var menu = (function () {
 	var menuCloseButton = null;
 	var menuContainerFirstFocusable = null; 
 	var menuContainerLastFocusable = null;
+	var menuLinks = null;
 
 	var settings = null;
 
@@ -103,6 +104,9 @@ var menu = (function () {
 				menuContainerLastFocusable = menuNodes[menuNodes.length- 1];
 			}
 
+			// Cache the menu links 
+			menuLinks = menuContainer.querySelectorAll("a");
+
 		}
 		else { 
 			throw("Menu Container ID was not found");
@@ -115,11 +119,11 @@ var menu = (function () {
 	 * A private method
 	 */
 	var bindEvents = function () {
-		// Code goes here...
 
 		// Bind the menu open button 
 		menuOpenButton.addEventListener('click', show.bind(this));
 
+		// Bind the menu close button 
 		menuCloseButton.addEventListener('click', hide.bind(this));
 
 		// If the first focusable item is tabed on
@@ -130,6 +134,11 @@ var menu = (function () {
 
 		// Add an escape key handler to the menu container
 		menuContainer.addEventListener('keydown', escapeKeyHandler.bind(this)); 
+
+		// Bind the links so we can close the menu if anyone clicks on an outbound link
+		menuLinks.forEach(function (link, index) { 
+			menuLinks[index].addEventListener('click', menuListClickHander.bind(this));
+		}); 
 
 	};
 
@@ -169,8 +178,10 @@ var menu = (function () {
 	 */
 	var tabKeyMenuFirstChildHandler = function (e) {
 
-		console.log("First Child Handler")
+		
 		if ( ( e.keyCode === 9 && e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			console.log("First Child Handler")
 
 			e.preventDefault();
 
@@ -183,8 +194,10 @@ var menu = (function () {
 	 */
 	var tabKeyMenuLastChildHandler = function (e) {
 
-		console.log("Last Child Handler")
+		
 		if ( ( e.keyCode === 9 && !e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			console.log("Last Child Handler")
 
 			e.preventDefault();
 
@@ -198,12 +211,29 @@ var menu = (function () {
 	 */
 	var escapeKeyHandler = function (e) {
 
-		console.log("Escape Key Handler ")
+		
 		if ( ( e.keyCode === 27 && !e.shiftKey ) && (menuContainer.classList.contains('hidden') === false) ) {
+
+			console.log("Escape Key Handler ")
 
 			hide(); 
 
 		}
+	};
+
+	/**
+	 * A private method
+	 */
+	var menuListClickHander = function (e) {
+
+		if ( menuContainer.classList.contains('hidden') === false) {
+
+			console.log("Link clicked handler closing menu");
+
+			hide(); 
+
+		}
+		
 	};
 
 
