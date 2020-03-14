@@ -7,9 +7,9 @@ jQuery(document).ready(function ($) {
 	//  });
 
 
-	myMobileMenu.init({
-		menuContainerClassName: "wl-menu-container"
-	});
+	// myMobileMenu.init({
+	// 	menuContainerClassName: "wl-menu-container"
+	// });
 
 	//myPublicationsSearch.init({
 	//	publicationListContainerClassName: "wl-publication-list-class-container",
