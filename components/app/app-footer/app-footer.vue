@@ -1,6 +1,17 @@
 <script setup lang="ts">
-const footerNavigation = {
-  social: [
+import type { defineComponent } from 'vue';
+
+interface FooterNavigation {
+  name: string
+  href: string
+  icon: ReturnType<typeof defineComponent>
+}
+
+/**
+ * The navigation links for the footer.
+ */
+const footerNavigation: FooterNavigation[] = [
+  /*
     {
       name: 'GitHub',
       href: '#',
@@ -15,13 +26,13 @@ const footerNavigation = {
           ]),
       }),
     },
-  ],
-};
+    */
+];
 </script>
 
 <template>
   <footer
-    class="mt-32 bg-gray-950 sm:mt-32"
+    class="mt-16"
     aria-labelledby="footer-heading"
   >
     <h2
@@ -30,11 +41,11 @@ const footerNavigation = {
     >
       Footer
     </h2>
-    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-      <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-16">
+      <div class="mt-8 border-t border-gray-300 pt-8 md:flex md:items-center md:justify-between">
         <div class="flex space-x-6 md:order-2">
           <a
-            v-for="item in footerNavigation.social"
+            v-for="item in footerNavigation"
             :key="item.name"
             :href="item.href"
             class="text-gray-500 hover:text-gray-400"
@@ -48,7 +59,7 @@ const footerNavigation = {
           </a>
         </div>
         <p class="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-          &copy; {{ new Date().getFullYear() }} My Website. All Rights
+          &copy; {{ new Date().getFullYear() }} CDESG. All Rights
         </p>
       </div>
     </div>

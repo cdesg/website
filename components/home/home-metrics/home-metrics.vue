@@ -9,10 +9,10 @@ const stats = [
 
 <template>
   <u-container>
-    <div class="bg-gray-950 py-24 sm:py-32">
+    <div class="py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 class="text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
             Trusted by creators worldwide
           </h2>
           <p class="mt-4 text-lg leading-8 text-gray-600">
@@ -25,10 +25,10 @@ const stats = [
             :key="stat.id"
             class="mx-auto flex max-w-xs flex-col gap-y-4"
           >
-            <dt class="text-base leading-7 text-gray-400">
+            <dt class="text-base leading-7 text-gray-700">
               {{ stat.name }}
             </dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
+            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
               {{ stat.value }}
             </dd>
           </div>

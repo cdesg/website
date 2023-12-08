@@ -38,6 +38,11 @@
     "strings": true
   },
 
-  "tailwindCSS.experimental.configFile": "tailwind.config.ts"
+  "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html"
+  }
 
 }

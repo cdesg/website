@@ -2,10 +2,10 @@
 </script>
 
 <template>
-  <div class="relative isolate pt-14 ">
+  <div class="relative isolate pt-14">
     <div class="absolute inset-0 flex items-center justify-center -z-10 transform-gpu overflow-hidden blur-3xl opacity-40">
       <svg
-        class="w-[750px] fill-current text-purple-500/40 mt-10"
+        class="w-[950px] fill-current text-brand-accent/30 mt-10 ml-60"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -16,35 +16,28 @@
         />
       </svg>
     </div>
-    <div class="py-24 sm:py-32 lg:pb-40">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mb-8 flex justify-center">
+    <div class="py-24 sm:py-28 lg:pb-40">
+      <div class="mx-auto max-w-5xl px-6 lg:px-8">
+        <div class="mb-8 flex justify-start">
           <a
-            class="inline-block px-3 py-1 text-gray-400 text-sm ring-1 ring-white/10 hover:ring-white/20 rounded-full leading-6"
+            class="inline-block px-3 py-1 text-gray-900 text-sm ring-1 ring-red-900 hover:ring-brand-accent rounded-full leading-6"
             href="#"
           >
-            Announcing our next round of funding.
-            <span class="font-bold text-white">
+            Lorem ipsum dolor sit amet
+            <span class="font-bold text-brand-accent">
               Read more <span aria-hidden="true">&rarr;</span>
             </span>
           </a>
         </div>
-        <div class="mx-auto max-w-2xl text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Data to enrich your online business
+        <div class="mx-auto max-5-4xl">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl">
+            Dedicated to increasing the visibility of development economics in Canada.
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-300">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
+          <div class="mt-10 flex items-center justify-start gap-x-6">
             <a
               href="#"
-              class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-            >Get started</a>
-            <a
-              href="#"
-              class="text-sm font-semibold leading-6 text-white"
-            >Learn more <span aria-hidden="true">→</span></a>
+              class="rounded-md bg-brand-accent px-6 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-red-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+            >Learn more about the CDESG</a>
           </div>
         </div>
       </div>
