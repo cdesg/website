@@ -6,4 +6,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
   content: {},
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+      ],
+    },
+  },
 });
