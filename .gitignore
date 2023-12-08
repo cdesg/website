@@ -1,16 +1,24 @@
-# Hugo default output directory
-/public
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
 
-# Ignore node modules 
+# Node dependencies
 node_modules
-resources
 
-## OS Files
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+# Logs
+logs
+*.log
 
-# OSX
+# Misc
 .DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
