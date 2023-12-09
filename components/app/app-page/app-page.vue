@@ -1,5 +1,5 @@
 <template>
-  <div class="antialiased bg-gray-100 text-gray-950">
+  <div class="antialiased bg-stone-50 text-gray-950">
     <div class="min-h-screen flex flex-col">
       <!-- header content goes here -->
       <slot name="header" />
