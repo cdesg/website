@@ -7,7 +7,7 @@
     <!-- Floating Blob -->
     <div class="absolute inset-1 flex justify-center items-center -z-10 transform-gpu overflow-hidden opacity-40 blur-3xl">
       <svg
-        class="w-[1050px] fill-current text-brand-accent/30"
+        class="w-[1050px] fill-current text-red-300"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -20,15 +20,15 @@
     </div>
     <u-container>
       <div class="py-24 sm:py-28 lg:pb-40">
-        <div class="max-w-5xl lg:max-w-6xl xl:max-w-7xl">
+        <div class="max-w-5xl lg:max-w-5xl xl:max-w-7xl">
           <!-- Mini Action Bar -->
           <div class="mb-8 flex justify-start">
             <a
-              class="inline-block px-3 py-1 text-gray-900 text-sm ring-1 ring-brand-accent hover:ring-red-900 rounded-full leading-6 bg-neutral-50"
+              class="inline-block px-3 py-1 text-gray-900 text-sm ring-1 ring-red-700 hover:ring-red-900 rounded-full leading-6 bg-neutral-50"
               href="#"
             >
               Lorem ipsum dolor sit amet
-              <span class="font-bold text-brand-accent">
+              <span class="font-bold text-red-700">
                 Read more <span aria-hidden="true">&rarr;</span>
               </span>
             </a>
@@ -39,10 +39,12 @@
           </h1>
           <!-- Button row -->
           <div class="mt-10 flex items-center justify-start gap-x-6">
-            <a
-              href="#"
-              class="rounded-md bg-brand-accent px-6 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-red-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-            >Learn more about the CDESG</a>
+            <u-button
+              to="#"
+              size="xl"
+            >
+              Learn more about the CDESG
+            </u-button>
           </div>
         </div>
       </div>
