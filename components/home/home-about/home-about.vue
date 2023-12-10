@@ -2,15 +2,28 @@
   <section>
     <u-container>
       <div class="py-24 sm:py-32">
-        <div class="mx-auto max-w-2xl lg:mx-0">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <div class="max-w-2xl lg:max-w-3xl">
+          <h2
+            class="
+          text-3xl
+          font-bold
+          tracking-tight
+          text-gray-900
+          sm:text-5xl"
+          >
             We approach the workplace as something that adds to our lives and adds value to world.
           </h2>
-          <p class="mt-6 text-base leading-7 text-gray-600">
+          <p class="mt-6 text-xl  text-gray-600">
             Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id. Integer vel nibh.
           </p>
+          <p class="mt-6 text-xl text-gray-600">
+            Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id. Integer vel nibh.
+          </p>
+          <p class="mt-6 text-xl text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta perspiciatis fugit esse consequatur repellat distinctio? Libero, molestiae esse? Molestiae, consequatur.
+          </p>
         </div>
-        <div class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+        <div class="mx-auto mt-16 flex flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
           <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-white p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
             <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">
               250k
@@ -30,7 +43,7 @@
             </p>
             <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p class="text-lg font-semibold tracking-tight text-white">
-                We’re proud that our customers have made over $8 billion in total revenue.
+                We're proud that our customers have made over $8 billion in total revenue.
               </p>
               <p class="mt-2 text-base leading-7 text-gray-400">
                 Eu duis porta aliquam ornare. Elementum eget magna egestas.

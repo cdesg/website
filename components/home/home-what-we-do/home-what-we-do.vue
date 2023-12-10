@@ -42,6 +42,20 @@ const features = [
     href: '#',
     icon: 'i-heroicons-light-bulb',
   },
+  {
+    name: 'SSL certificates',
+    description:
+      'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
+    href: '#',
+    icon: 'i-heroicons-light-bulb',
+  },
+  {
+    name: 'Simple queues',
+    description:
+      'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.',
+    href: '#',
+    icon: 'i-heroicons-light-bulb',
+  },
 ];
 </script>
 
@@ -49,52 +63,44 @@ const features = [
   <section>
     <u-container>
       <div class="py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-base font-semibold leading-7 text-red-700">
-              Deploy faster
-            </h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Everything you need to deploy your app
-            </p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.
-            </p>
-          </div>
-          <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl
-              class="
-              grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3
-              "
+        <div class="max-w-2xl lg:max-w-3xl">
+          <h2
+            class="
+          text-3xl
+          font-bold
+          tracking-tight
+          text-gray-900
+          sm:text-5xl"
+          >
+            What we do
+          </h2>
+          <p class="mt-6 text-xl text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta perspiciatis fugit esse consequatur repellat distinctio? Libero, molestiae esse? Molestiae, consequatur.
+          </p>
+        </div>
+        <div class="mt-16 sm:mt-20">
+          <ul
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
+          >
+            <li
+              v-for="feature in features"
+              :key="feature.name"
+              class="flex flex-col border border-gray-200 p-8 rounded-xl"
             >
-              <div
-                v-for="feature in features"
-                :key="feature.name"
-                class="flex flex-col border border-gray-300 p-10 rounded-xl"
-              >
-                <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                  <u-icon :name="feature.icon" />
-                  <component
-                    :is="feature.icon"
-                    class="h-5 w-5 flex-none text-indigo-600"
-                    aria-hidden="true"
-                  />
-                  {{ feature.name }}
-                </dt>
-                <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                  <p class="flex-auto">
-                    {{ feature.description }}
-                  </p>
-                  <p class="mt-6">
-                    <a
-                      :href="feature.href"
-                      class="text-sm font-semibold leading-6 text-indigo-600"
-                    >Learn more <span aria-hidden="true">→</span></a>
-                  </p>
-                </dd>
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-bl from-red-400 to-red-500">
+                <u-icon
+                  :name="feature.icon"
+                  class="border border-red-300 h-6 w-6 bg-white"
+                />
               </div>
-            </dl>
-          </div>
+              <h3 class="mt-3 text-lg font-semibold leading-7 text-gray-900">
+                {{ feature.name }}
+              </h3>
+              <p class="mt-3">
+                {{ feature.description }}
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </u-container>
