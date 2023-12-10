@@ -7,7 +7,7 @@
     <!-- Floating Blob -->
     <div class="absolute inset-1 flex justify-center items-center -z-10 transform-gpu overflow-hidden opacity-40 blur-3xl">
       <svg
-        class="w-[1050px] fill-current text-red-300"
+        class="w-[1050px] fill-current text-red-200"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
